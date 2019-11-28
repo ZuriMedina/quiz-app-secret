@@ -1,0 +1,46 @@
+<div class="col-md-4 mx-auto">
+  {{#if user.admin}}
+  <div class="card text-center">
+    <div class="card-header">
+      <h3>New Quiz</h3>
+    </div>
+    <div class="card-body">
+      <form action="/quizzes/new-quiz" method="POST">
+        <div class="form-group">
+          <input type="text" name="title" class="form-control" placeholder="Title" autofocus required />
+        </div>
+        <div class="form-group">
+          <textarea type="text" name="description" class="form-control" placeholder="Description" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="quizone" class="form-control" placeholder="Your Question here" required />
+          <input type="text" name="quiztwo" class="form-control" placeholder="Your Question here" required />
+          <input type="text" name="quizthree" class="form-control" placeholder="Your Question here" required />
+          <input type="text" name="quizfour" class="form-control" placeholder="Your Question here" required />
+          <input type="text" name="correct" class="form-control" placeholder="Your Answer here" required />
+        </div>
+
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="customCheck1" name="published" value="true">
+          <label class="custom-control-label" for="customCheck1">Publish</label>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">
+            Save
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  {{else}}
+  <div class="card text-center">
+    <div class="card-header">
+      <h3>Yu don't have permission to be here</h3>
+    </div>
+    <div class="card-body">
+      <p>You must be a Admin</p>
+    </div>
+  </div>
+  {{/if}}
+</div>

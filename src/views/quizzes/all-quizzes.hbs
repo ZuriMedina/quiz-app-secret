@@ -1,0 +1,59 @@
+<div class="row">
+  {{#each quizzes}}
+  <div class="col-md-12 pb-5">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+          {{ title }}
+        </h4>
+        <p>{{ description }}</p>
+        <ul>
+          <li>{{ quizone}}</li>
+          <li>{{ quiztwo}}</li>
+          <li>{{ quizthree}}</li>
+          <li>{{ quizfour}}</li>
+        </ul>
+        <div class="pb-3">
+          <select class="custom-select">
+            <option selected>Your answer</option>
+            <option value="1">A</option>
+            <option value="2">B</option>
+            <option value="3">C</option>
+            <option value="4">D</option>
+          </select>
+        </div>
+        <div class="text-center pb-3">
+
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            See the answer
+          </button>
+
+          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  {{correct}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{else}}
+  <div class="card mx-auto">
+    <div class="card-body">
+      <h1>Hello {{user.name}}</h1>
+      <p clsss="lead">There are not Quizzes yet.</p>
+    </div>
+  </div>
+  {{/each}}
+</div>

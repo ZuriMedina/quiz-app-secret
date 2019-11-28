@@ -1,0 +1,28 @@
+body {
+  background: #0000ff; 
+  background: -webkit-linear-gradient(
+    to right,
+    #b22bab,
+    #c719aa
+  ); 
+  background: linear-gradient(
+    to right,
+    #1d5e6e,
+    #4961ca
+  );
+}
+
+.logo {
+  width: 30%;
+}
+
+.footer {
+  color: #fff;
+}
+.footer a {
+  color: #fff;
+}
+.footer a:hover {
+  color: #0000ff;
+  text-decoration: none;
+}
