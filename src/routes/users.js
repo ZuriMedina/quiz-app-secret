@@ -6,7 +6,6 @@ const router = express.Router()
 
 router.get('/users/signup', (req, res) => {
   res.render('users/signup')
-  postSignup
 })
 
 router.post('/users/signup', async (req, res) => {

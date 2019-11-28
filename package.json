@@ -5,10 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon --exec babel-node src/index",
-    "start": "node src/index.js"
-  },
-  "engines": {
-    "node": "8.9.3"
+    "start": "node src/index"
   },
   "keywords": [],
   "author": "Zuri Medina",
