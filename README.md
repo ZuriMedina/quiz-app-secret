@@ -10,9 +10,9 @@ npm install
 npm run dev
 ```
 
-### How to use
+### MongoDB
 
-if you want to use your own local database you should change the code in database.js archive into config folder.
+if you want to use your own local MongoDB you should change the code in database.js archive into config folder.
 ```
 mongoose.connect('mongodb+srv://root:root@cluster0-wpwha.mongodb.net/test?retryWrites=true&w=majority', {
   useCreateIndex: true,
@@ -21,5 +21,19 @@ mongoose.connect('mongodb+srv://root:root@cluster0-wpwha.mongodb.net/test?retryW
 })
 ```
 
+### Login Admin
 
+You should login as admin in order to have full access.
+
+- User: admin
+- Email: admin@admin.com
+- Password: admin
+
+### Create admin users
+
+Into MongoDB database you should change the value of the property
+```
+"admin": true
+```
+His default value is false for new users.
 
