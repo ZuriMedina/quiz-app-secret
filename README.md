@@ -10,6 +10,6 @@ npm install
 npm run dev
 ```
 
-"dev": "nodemon --exec babel-node src/index",
+
 
 
